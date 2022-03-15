@@ -5,5 +5,12 @@ The method of least squares is a standard approach in regression analysis to app
 
 [Least Squares](https://en.wikipedia.org/wiki/Least_squares)
 
+## Libs
+
+```
+pip install numpy
+pip install matplotlib
+```
+
 ## Example
 ![alt text](https://github.com/MorcilloSanz/LeastSquares/blob/main/img/img.png)
