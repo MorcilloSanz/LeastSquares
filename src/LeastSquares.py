@@ -1,3 +1,40 @@
+"""
+    Given the points: a1 = (a1x, a1y), a2 = (a2x, a2y), ..., ak = (akx, aky)
+    Being k the number of points and n the order of the function we want to fit
+
+    The function we're talking about is y = u1*x + u2*x^2 + ... + un*x^n. Its matrix form:
+
+    ⎛       2        n⎞
+    ⎜a1x a1x  ... a1x ⎟
+    ⎜                 ⎟   ⎛u1⎞   ⎛a1y⎞
+    ⎜       2        n⎟   ⎜  ⎟   ⎜   ⎟
+    ⎜a2x a2x  ... a2x ⎟   ⎜u2⎟   ⎜a2y⎟
+    ⎜                 ⎟ ⋅ ⎜  ⎟ = ⎜   ⎟
+    ⎜.   .    .   .   ⎟   ⎜. ⎟   ⎜.  ⎟
+    ⎜                 ⎟   ⎜  ⎟   ⎜   ⎟
+    ⎜       2        n⎟   ⎝un⎠   ⎝aky⎠
+    ⎝akx akx  ... akx ⎠
+
+    Being u1, u2, ..., un the solutions of the linear system
+
+    There is no solution for: Ax = b (Which mean that not all the points are in the colspace)
+    Multiplying both sides by A^T (A transpose):
+        A^TAx = A^Tb
+
+    Solving that new linear system we get the u1, u2, ..., un values which make the function
+    'y' fit better with the points a1, a2, ..., ak
+
+    If the residual 'ri', is ri = yi - y(xi), the function 'y' is the one which minimizes the
+    sum:
+
+      n
+     ___
+     ╲      2
+     ╱    ri
+     ‾‾‾
+    i = 1
+"""
+
 import numpy as np
 
 class LeastSquares:
