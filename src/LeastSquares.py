@@ -3,13 +3,14 @@
     Being k the number of points and n the order of the function we want to fit
 
     The function we're talking about is y = u1*x + u2*x^2 + ... + un*x^n. Its matrix form:
+    
 
     ⎛       2        n⎞
     ⎜a1x a1x  ... a1x ⎟
     ⎜                 ⎟   ⎛u1⎞   ⎛a1y⎞
     ⎜       2        n⎟   ⎜  ⎟   ⎜   ⎟
     ⎜a2x a2x  ... a2x ⎟   ⎜u2⎟   ⎜a2y⎟
-    ⎜                 ⎟ ⋅ ⎜  ⎟ = ⎜   ⎟
+    ⎜                 ⎟   ⎜  ⎟ = ⎜   ⎟
     ⎜.   .    .   .   ⎟   ⎜. ⎟   ⎜.  ⎟
     ⎜                 ⎟   ⎜  ⎟   ⎜   ⎟
     ⎜       2        n⎟   ⎝un⎠   ⎝aky⎠
